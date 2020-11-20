@@ -1,12 +1,13 @@
 FROM influxdb:1.8.3
 MAINTAINER Tate Exon
-
+RUN chown -R 1000:1000 /var/lib/influxdb
 # just add a user to make kubernetes happy
 USER 1000
 		
 EXPOSE 8086
 
 VOLUME /var/lib/influxdb
+
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["influxd"]
