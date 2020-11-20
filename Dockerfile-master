@@ -1,4 +1,6 @@
-FROM kubernautslabs/jmeter-base:latest
+FROM tateexon/jmeter-base:latest
 MAINTAINER Kubernauts-lab
+
+USER 1000
 		
 EXPOSE 60000
